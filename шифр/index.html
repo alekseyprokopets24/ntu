@@ -1,0 +1,111 @@
+<script>
+    function shifrator() {
+        const alphabet = [
+            ' ',
+            'a',
+            'b',
+            'c',
+            'd',
+            'e',
+            'f',
+            'g',
+            'h',
+            'i',
+            'j',
+            'k',
+            'l',
+            'm',
+            'n',
+            'o',
+            'p',
+            'q',
+            'r',
+            's',
+            't',
+            'u',
+            'v',
+            'w',
+            'x',
+            'y',
+            'z',
+        ]
+        let text = 'abc abc';
+        let textSplit = text.split('');
+        let shifr = [];
+        for (let i = 0; i < textSplit.length; i++) {
+            letterIndex = alphabet.indexOf(textSplit[i]) + 3;
+            if (text[i] == ' ') {
+                letterIndex = 0
+            }
+            if (text[i] == 'x') {
+                letterIndex = 1
+            }
+            if (text[i] == 'y') {
+                letterIndex = 2
+            }
+            if (text[i] == 'z') {
+                letterIndex = 3
+            }
+            shifr.push(alphabet[letterIndex]);
+        }
+        console.log(shifr);
+        return shifr;
+    }
+    function deshifrator() {
+        const alphabet = [
+            ' ',
+            'a',
+            'b',
+            'c',
+            'd',
+            'e',
+            'f',
+            'g',
+            'h',
+            'i',
+            'j',
+            'k',
+            'l',
+            'm',
+            'n',
+            'o',
+            'p',
+            'q',
+            'r',
+            's',
+            't',
+            'u',
+            'v',
+            'w',
+            'x',
+            'y',
+            'z',
+        ]
+        let text = 'abc abc';
+        let textSplit = text.split('');
+        let shifr = [];
+        for (let i = 0; i < textSplit.length; i++) {
+            letterIndex = alphabet.indexOf(textSplit[i]) - 3;
+            if (text[i] == ' ') {
+                letterIndex = 0
+            }
+            if (text[i] == 'a') {
+                letterIndex = 24
+            }
+            if (text[i] == 'b') {
+                letterIndex = 25
+            }
+            if (text[i] == 'c') {
+                letterIndex = 26
+            }
+            shifr.push(alphabet[letterIndex]);
+        }
+        console.log(shifr);
+        return shifr;
+    }
+    shifrator();
+    deshifrator();
+
+
+
+</script>
